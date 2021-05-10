@@ -1,5 +1,26 @@
 {% extends "network/layout.html" %}
+{% load static %}
+
+{% block script %}
+    <script src="{% static 'network/index.js' %}"></script>
+{% endblock %}
 
 {% block body %}
-    TODO
+    
+    <div id="all-post">
+        <h2 class="mt-2">All Posts</h2>
+
+        <div class="p-2 m-3 ml-4 mr-4 pt-3 pr-4 pl-4 border rounded-sm">
+            <h5>New Post</h5>
+            <textarea class="form-control mb-2" id="postTextArea" rows="2"></textarea>
+            <button id="post" class="btn btn-primary">Post</button>
+        </div>
+
+        <div id="posts">
+        </div>
+    </div>
+
+    <div id="following1">
+    </div>
+
 {% endblock %}
